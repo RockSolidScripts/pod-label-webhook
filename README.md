@@ -10,10 +10,18 @@ K8s mutation webhook for pod labels using operator SDK - GO lang
 - Helm
 - cert manager
 - minikube
+- docker hub account
 
+
+**Install "Better comments" and "TODO tree" extensions for better collabration**
 
 ### To Deploy on the cluster
 **Build and push your image to the location specified by `IMG`:**
+
+**Update the Docker registry secret:**
+
+Update the k8s secret with your docker registrt creds in base64 format.
+
 
 ```sh
 make docker-build docker-push IMG=<some-registry>/pod-label-webhook:tag
