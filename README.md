@@ -1,10 +1,5 @@
-# pod-label-webhook
-// TODO(user): Add simple overview of use/purpose
-
 ## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
-
-## Getting Started
+K8s mutation webhook for pod labels using operator SDK - GO lang
 
 ### Prerequisites
 - go version v1.20.0+
@@ -13,6 +8,8 @@
 - Access to a Kubernetes v1.11.3+ cluster. - Minikube for local Devlopment
 - Operator SDK
 - Helm
+- cert manager
+- minikube
 
 
 ### To Deploy on the cluster
@@ -21,6 +18,13 @@
 ```sh
 make docker-build docker-push IMG=<some-registry>/pod-label-webhook:tag
 ```
+
+**Install the cert manager into the cluster:**
+```sh
+make install-cert-manager
+```
+
+Update the cert manager helm chart version if required in the makefile.
 
 **NOTE:** This image ought to be published in the personal registry you specified. 
 And it is required to have access to pull the image from the working environment. 
