@@ -9,7 +9,6 @@ K8s mutation webhook for pod labels using operator SDK - GO lang
 - Operator SDK
 - Helm
 - cert manager
-- minikube
 - docker hub account
 
 
